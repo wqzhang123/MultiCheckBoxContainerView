@@ -119,11 +119,19 @@ struct MultiCheckBoxContainerView: View {
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Yes or No CheckBox")
-            YesNoCheckBoxContainerView()
+            VStack {
+                Text("Yes or No CheckBox")
+                HStack {
+                    Spacer()
+                    YesNoCheckBoxContainerView()
+                        .frame(width: 100, height: 50)
+                    Spacer()
+                }
+            }
+            .padding(50)
             
-            Text("Multiple Options CheckBox")
-            HStack {
+            VStack {
+                Text("Multiple Options CheckBox")
                 MultiCheckBoxContainerView()
             }
         }

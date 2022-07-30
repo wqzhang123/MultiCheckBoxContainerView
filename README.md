@@ -1,1 +1,3 @@
 # MultiCheckBoxContainerView
+
+![Screenshot](screenshot.png)

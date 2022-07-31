@@ -35,13 +35,14 @@ struct CheckBoxView<Option: OptionSelectable>: View {
         } label: {
             HStack {
                 Image(systemName: option == viewModel.selectedOption ?  checkedImage : uncheckedImage)
-                    .onTapGesture {
-                        viewModel.selectedOption = option
-                    }
                 
                 Text(option.description)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                viewModel.selectedOption = option
+            }
         }
         .buttonStyle(.plain)
     }
